@@ -1,0 +1,194 @@
+.row-container {
+  padding: 24px;
+  color: white;
+  position: relative; /* Adicionado para posicionar as setas relativamente ao container */
+  top: 100px;  
+  width: 1,440px;
+  background: black;
+  
+  
+}
+
+.row-cards {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: hidden; /* Esconder a barra de rolagem horizontal */
+  
+  gap: 10px; /* Espaçamento entre os filmes */
+  justify-content: flex-start; /* Garantir que os filmes se distribuam igualmente */
+  position: relative;
+  top: -20px;
+  
+}
+
+.movie-card-container {
+  position: relative; /* Contexto para o posicionamento absoluto dos elementos dentro */
+  flex: 0 0 22%;
+  max-width: 22%;
+  box-sizing: border-box;
+  text-align: left; /* Alinha o texto à esquerda */
+  margin: 10px;
+  
+  
+  
+}
+
+.movie-card {
+  object-fit: contain; 
+  margin-bottom: 10px;
+  transition: transform 450ms;
+  position: relative; /* Necessário para o posicionamento absoluto dos elementos filhos */
+  
+}
+
+.movie-card-large {
+  object-fit: contain;    
+  transition: transform 450ms;
+  border-radius: 24px;
+  width: 339px;
+  height: 189px;
+  
+  
+}
+
+.movie-card:hover {
+  transform: scale(1.08);
+  
+}
+
+/* Navegação (Setas) */
+.nav-container {
+  position: absolute; /* Para posicionar as setas no canto superior direito */
+  top: 10px; /* Ajusta a posição para o topo */
+  right: 10px; /* Ajusta a posição para o canto direito */
+  display: flex;
+  gap: 10px; /* Espaçamento entre as setas */
+}
+
+.nav-button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.nav-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.rating-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro com transparência */
+  border-radius: 12px;
+  padding: 4px 8px;
+  z-index: 10; /* Garante que a estrela e o número estejam acima dos outros elementos */
+}
+
+.rating-star {
+  color: gold; /* Cor da estrela */
+  font-size: 16px; /* Tamanho da estrela */
+  margin-right: 4px; /* Espaço entre a estrela e o número */
+}
+
+.rating-number {
+  color: white; /* Cor do número */
+  font-size: 14px; /* Tamanho do número */
+}
+
+.movie-title {
+  position: absolute;
+  top: 40%;
+  bottom: 60px; /* Ajuste conforme necessário para o posicionamento sobre a imagem */
+  left: 10px; /* Alinha o título à esquerda da imagem */
+  color: white;
+  text-shadow: 1px 1px 2px black; /* Adiciona uma sombra ao texto para melhor contraste */
+  margin: 0;
+  font-size: 24px; /* Ajuste conforme necessário */
+  width: calc(100% - 20px); /* Largura do título, ajustando o padding */
+}
+
+.row-container .watch-button {
+  width: 184px;
+  height: 40px;
+  position: absolute;
+  top: 70%;
+  bottom: 10px; /* Ajuste conforme necessário para o posicionamento sobre a imagem */
+  left: 10px; /* Alinha o botão à esquerda da imagem */
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 12px;
+  z-index: 10; /* Garante que o botão esteja acima das imagens */
+  font-size: 16px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Adiciona um contorno ao texto */
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+@media (max-width: 768px) {
+  .row-container {
+    margin-left: 0; /* Remove a margem à esquerda em telas pequenas */
+    width: 366px; /* Ajusta a largura para ocupar toda a tela */
+    padding: 10 10px; /* Adiciona padding horizontal */
+    position: relative;
+top: -1000px;
+  }
+
+  .row-cards {
+    flex-direction: row; /* Mantém as cartas na horizontal */
+    overflow-y: hidden;
+    overflow-x: hidden;
+    position: relative;
+    top: 10px;
+    
+    
+
+    
+  }
+ 
+
+  .movie-card-container {
+    /* Ajusta a largura das cartas para ocupar 50% da largura disponível */
+    max-width: 50%;
+    box-sizing: border-box; /* Inclui padding e bordas na largura total */
+    
+  }
+
+  .movie-card {
+    width: 100%; /* Faz com que o cartão ocupe a largura total do contêiner */
+    max-height: 284px; /* Define a altura máxima do cartão */
+    object-fit: cover; /* Garante que a imagem preencha o espaço definido sem distorção */
+  }
+
+  .movie-card-large {
+    width: 166px; /* Ajusta a largura para ocupar a largura total do contêiner */
+    height: 284px;  /* Ajusta a altura para uma visualização melhor */
+    object-fit: cover; /* Garante que a imagem preencha o espaço definido sem distorção */
+    position: relative;
+    left: 2px;
+    margin: -10px;
+  }
+
+  .movie-title {
+    font-size: 16px; /* Reduz o tamanho da fonte do título para melhor adequação */
+    margin: 0; /* Remove a margem para melhor alinhamento */
+    position: relative;
+    top: -100px;
+  }
+
+  .row-container .watch-button {
+    width: 159px;
+    height: 35px;
+    font-size: 14px;
+    top: 220px;
+    bottom: 10px;
+    position: absolute;
+    left: -3%;
+  }
+}

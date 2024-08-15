@@ -1,0 +1,176 @@
+/* src/components/Header.css */
+
+/* Estilos gerais do Header */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1,400px; 
+  height: 96px;
+  padding: 24px;
+  background-color: #000000;
+  position: fixed; /* Fixar o header no topo */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Garante que o header fique acima de outros elementos */
+}
+
+/* Logo */
+.logo {
+  width: 128px;
+  height: 34.88px;
+  cursor: pointer; /* Adiciona um cursor de mão ao passar sobre o logo */
+}
+
+/* Contêiner de pesquisa */
+.search-container {
+  display: flex;
+  align-items: center;
+  border-radius: 99px;
+  width: 100%; /* Ajusta para a largura disponível */
+  max-width: 377px;
+  height: 48px;
+  position: relative;
+  margin: 0 auto; /* Centraliza o contêiner de pesquisa */
+}
+
+.search-container input {
+  border: none;
+  outline: none;
+  background-color: #232323;
+  color: white;
+  padding-left: 48px;
+  padding-right: 20px;
+  width: 100%;
+  height: 100%;
+  border-radius: 99px;
+  font-size: 16px;
+}
+
+/* Ícones de pesquisa e filtro */
+.search-icon {
+  position: absolute;
+  left: 16px;
+  color: white;
+}
+
+.filter-icon {
+  width: 48px; /* Reduzido para dispositivos móveis */
+  height: 48px;
+  border-radius: 99px;
+  background-color: #232323;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-left: 12px;
+  cursor: pointer;
+}
+
+/* Botão de login */
+.login-button {
+  background-color: #232323;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Contêiner de resultados */
+.results-container {
+  position: absolute;
+  top: 100px;
+  right: 550px; /* Ajusta para o lado direito da tela */
+  background-color: #191919;
+  border: 1px solid #cccccc;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 377px;
+  max-height: 224px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 12px;
+  overflow-y: auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+}
+
+/* Itens dos resultados */
+.result-item {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.result-title {
+  font-size: 14px;
+  margin: 0;
+}
+
+.result-date {
+  font-size: 12px;
+  color: #aaa;
+  margin: 0;
+}
+
+.result-image {
+  width: 80px; /* Ajuste o tamanho conforme necessário */
+  height: 120px; /* Ajuste o tamanho conforme necessário */
+  object-fit: cover; /* Para ajustar a imagem sem distorção */
+  border-radius: 8px; /* Bordas arredondadas para um visual mais agradável */
+  margin-right: 12px; /* Espaço entre a imagem e o texto */
+}
+
+/* Botão de fechar */
+.close-button {
+  position: absolute;
+  top: 12px; /* Ajuste conforme necessário */
+  right: 12px; /* Ajuste conforme necessário */
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mídia queries para celulares */
+@media (max-width: 768px) {
+  .header-container {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 16px;
+  }
+
+  .search-container {
+      width: 100%;
+      max-width: none; /* Remove o máximo de largura */
+      margin: 10px 0; /* Adiciona margem vertical para melhor espaçamento */
+  }
+
+  .logo {
+      width: 100px; /* Reduz o tamanho do logo para telas menores */
+      height: auto; /* Ajusta a altura proporcionalmente */
+      position: relative;
+      left: 30%;
+  }
+
+  .filter-icon {
+      width: 48px;
+      height: 48px;
+  }
+
+  .login-button {
+    display: none; /* Reduz o padding para melhor ajuste em telas menores */
+      
+  }
+
+  .results-container {
+      right: 0;
+      width: 100%;
+      max-width: 100%;
+  }
+}

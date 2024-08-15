@@ -1,0 +1,223 @@
+/* src/components/ActorDetail.css */
+.actor-detail-container {
+    display: flex;
+    flex-direction: column; /* Organiza os itens verticalmente */
+    align-items: flex-end; /* Alinha o conteúdo ao lado direito */
+    padding: 20px;
+    position: relative; /* Necessário para o posicionamento absoluto */
+    color: #ddd;
+    position: relative;
+    top: 180px;
+   
+}
+
+.actor-detail-image-container {
+    position: absolute;
+    top: 20px; /* Ajusta a distância do topo */
+    right: 20px; /* Ajusta a distância da borda direita */
+}
+
+.actor-detail-image {
+    width: 400px;
+    height: 350px;
+    border-radius: 24px;
+    border: 4px solid #ddd;
+    position: relative;
+}
+
+.actor-detail-info {
+    margin-top: 380px; /* Espaço suficiente para posicionar a biografia abaixo da foto */
+    width: 400px; /* Largura da biografia */
+    padding-right: 20px; /* Espaço à direita para evitar sobreposição com a imagem */
+}
+
+.actor-detail-info h2 {
+    margin-top: 0;
+}
+
+.bio {
+    margin-top: 20px;
+}
+.actor-credits-container {
+    margin-top: 20px;
+    padding-left: 20px; /* Espaço para o título e lista de filmes/series */
+    position: relative;
+    left: -266%;
+    top: -600px;
+    width: 980px;
+}
+
+.actor-credits-container h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #ddd; /* Cor do título */
+}
+
+.actor-credits-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Três colunas */
+    gap: 20px; /* Espaçamento entre os itens */
+}
+
+.credit-card {
+    display: flex;
+    flex-direction: row; /* Layout em linha */
+    align-items: center; /* Alinha verticalmente os itens */
+    gap: 10px; /* Espaçamento entre a imagem e o texto */
+}
+
+.credit-image {
+    width: 64px;
+    height: 86px;
+    border-radius: 12px;
+    border: 2px solid #ddd;
+}
+
+.credit-info {
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.credit-title {
+    margin: 0;
+    font-weight: bold;
+}
+
+.credit-release-date {
+    margin: 0;
+    color: #666;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+    justify-content: center; /* Centraliza a paginação */
+}
+
+.pagination button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination button.active {
+    background-color: #0056b3;
+}
+
+/* Ajustes específicos para dispositivos móveis */
+@media (max-width: 768px) {
+    .actor-detail-container {
+        align-items: center; /* Alinha o conteúdo ao centro */
+        padding: 10px; /* Reduz o padding para telas menores */
+        position: relative;
+        top: 120px;
+        height: 658px;
+    }
+
+    .actor-detail-image-container {
+        position: relative; /* Remove o posicionamento absoluto para celulares */
+        margin-bottom: 20px; /* Adiciona margem inferior para espaçamento */
+        width: 100%; /* Ajusta a largura para ocupar toda a tela */
+        max-width: none; /* Remove a limitação de largura máxima */
+        
+    }
+
+    .actor-detail-image {
+        width: 343px; /* Ajusta a largura da imagem */
+        height: 343; /* Ajusta a altura proporcionalmente */
+       
+    }
+
+    .actor-detail-info {
+        width: 105%; /* Ajusta a largura para ocupar toda a tela */
+        padding-right: 0; /* Remove o padding direito */
+        background: black;
+    }
+    .actor-detail-info h2 {
+        position: relative;
+        left: 10px;
+    }
+    
+    .bio {
+        position: relative;
+        left: 10px;
+    }
+
+    .actor-credits-container {
+        margin-top: 20px;
+        padding-left: 0; /* Remove o padding esquerdo */
+        width: 100%; /* Ajusta a largura para ocupar toda a tela */
+        position: relative;
+        left: 0; /* Remove o deslocamento horizontal */
+        top: 0; /* Remove o deslocamento vertical */
+    }
+
+    .actor-credits-container h3 {
+        font-size: 20px; /* Reduz o tamanho da fonte para telas menores */
+        position: relative;
+        left: 10px;
+    }
+
+    .actor-credits-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Define 2 colunas */
+        gap: 10px; /* Reduz o espaçamento entre os itens */
+        max-height: 600px; /* Ajusta a altura máxima para limitar a visualização a 6 filmes */
+        overflow-y: auto; /* Adiciona rolagem se necessário */
+    }
+
+    .credit-card {
+        flex-direction: column; /* Alinha os itens verticalmente */
+        align-items: center; /* Centraliza os itens */
+        width: 318px;
+        height: 94px;
+        position: relative;
+        left: 10px;
+
+    }
+
+    .credit-image {
+        width: 64px;
+        height: 86px;
+    }
+
+    .credit-info {
+        text-align: start;
+        position: relative;
+        left: 70px;
+        top: -100px;
+    
+    }
+
+    .credit-title {
+        font-size: 14px; /* Ajusta o tamanho da fonte */
+    }
+
+    .credit-release-date {
+        font-size: 12px; /* Ajusta o tamanho da fonte */
+    }
+
+    .pagination {
+        flex-direction: column; /* Alinha os botões verticalmente */
+        gap: 10px; /* Ajusta o espaçamento entre os botões */
+    }
+
+    .pagination button {
+        width: 100%; /* Ajusta a largura dos botões para ocupar toda a tela */
+        padding: 10px; /* Ajusta o padding para melhorar a usabilidade */
+    }
+
+    /* Oculta filmes adicionais além dos 6 primeiros */
+    .actor-credits-list > :nth-child(n+7) {
+        display: none; /* Oculta todos os itens a partir do 7º */
+    }
+}

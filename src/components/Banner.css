@@ -1,0 +1,412 @@
+
+.banner-container {
+    display: flex;
+    gap: 10px;
+    color: white;
+    position: relative;
+    width: 1471px; /* Largura fixa */
+    height: 850px; /* Altura fixa */
+     /* Margem superior de 96px */
+    padding: 24px; /* Padding: superior, direito, inferior, esquerdo */
+    top: 100px;
+    background: black;
+    
+}
+
+.banner-container .banner-large img {
+    background: rgba(0, 0, 0, 0.5); /* Cor da sobreposição escura com opacidade */
+}
+
+.banner-large {
+    flex: 70%;
+    position: relative;
+    
+}
+
+.banner-large img {
+    width: 1000px; /* Ajusta a largura da imagem para ocupar o contêiner */
+    height: 826px; /* Ajusta a altura da imagem para ocupar o contêiner */
+    object-fit: cover; /* Ajusta o modo de ajuste da imagem */
+    border-radius: 8px; /* Bordas arredondadas */
+    /* Ajusta a altura da imagem para ocupar o contêiner */
+    object-fit: cover; /* Ajusta o modo de ajuste da imagem */
+    border-radius: 8px; /* Bordas arredondadas */
+    filter: brightness(50%); /* Escurece a imagem para 50% do brilho original */
+    position: relative;
+    top: 30px;
+    
+}
+
+.banner-large img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Cor da sobreposição escura com opacidade */
+    border-radius: 8px; /* Mesma borda arredondada que a imagem */
+    pointer-events: none; /* Garante que a sobreposição não interfira na interação com a imagem */
+}
+
+.banner-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+.highlight-button {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    width: 167px;
+    height: 36px;
+    gap: 4px;
+    
+}
+
+
+
+.banner-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    width: 430px;
+    height: 48px;
+    gap: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Adiciona um contorno ao texto */
+}
+
+.banner-content p {
+    color: #fcfbfb;
+    width: 550px;
+    height: 68px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Adiciona um contorno ao texto */
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Adiciona um contorno ao texto */
+}
+
+.star {
+    color: #ffd700; /* Cor amarela para a estrela */
+}
+
+.rating-number {
+    font-size: 1rem;
+    color: #fff;
+}
+.text {
+    color: #B4B4B4;
+}
+
+.banner-description {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.watch-button {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    width: 250px;
+    height: 48px;
+    position: relative;
+    top: -10px;
+    backdrop-filter: blur(8px);
+}
+
+.watch-button h3 {
+    width: 236px;
+    position: relative;
+    top: -13px;
+}
+
+.banner-small {
+    
+    width: 380px;
+    height: 826px;
+}
+
+.small-banner-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    position: relative;
+    top: -10px;
+}
+
+.small-banner-images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 380px;
+   
+    
+}
+
+.small-banner-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative; /* Necessário para o posicionamento do pseudo-elemento */
+    height: 253px;
+    width: 380px;
+    top:28px;
+    left: -50px;
+}
+
+
+.small-banner-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    filter: brightness(50%);
+}
+
+
+.small-banner-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    right:  100%;
+    top: 70px;
+    
+}
+
+.small-banner-movie-title {
+    font-size: 24px;
+    margin: 0;
+    color: white;
+    width: 356px;
+    height: 23px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Adiciona um contorno ao texto */
+    position: relative;
+    top: -30px;
+}
+
+.small-watch-button {
+    background-color: rgba(255, 255, 255, 0.2);    
+    border: none;   
+    border-radius: 5px;    
+    cursor: pointer;
+    text-transform: uppercase;
+    width: 200px;
+    backdrop-filter: blur(8px); 
+    position: relative;
+    top: -20px;
+    height: 30px;
+    color: white;
+}
+.small-watch-button h1{
+    font-size: 16px;
+    width: 200px;
+    height: 19px;
+    position: relative;
+    right: 10px;
+    color: #fcfbfb;
+}
+
+.small-banner-rating {
+    width: 50px;
+    height: 25px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 4px;
+    backdrop-filter: blur(8px); 
+    position: relative;
+    top: -120px;
+    
+}
+@media (max-width: 768px) {
+    .banner-container {
+      width: 375px; /* Ajusta a largura para ocupar toda a tela */
+      height: 1715px; /* Ajusta a altura para que seja proporcional */      
+      padding: 0 10px; /* Reduz o padding horizontal */
+      display: block; /* Ajusta o display para o layout em coluna */
+      position: relative;
+      top: 50px;
+    }
+  
+    .banner-large {
+      flex: none; /* Remove a flexibilidade para o banner grande */
+      width: 375px; /* Ajusta a largura para 100% do contêiner pai */
+      height: auto; /* Ajusta a altura para manter a proporção */
+      position: relative;
+      left: 50px;
+    }
+  
+    .banner-large img {
+      width: 343px; /* Ajusta a largura da imagem para ocupar 100% do contêiner */
+      height: 288px; /* Ajusta a altura para manter a proporção */
+      border-radius: 8px; /* Mantém as bordas arredondadas */
+      filter: brightness(50%); /* Mantém a opacidade da imagem */
+      position: relative;
+      left: -50px;
+    }
+  
+    .banner-content {
+      position: relative;
+      bottom: auto; /* Remove a posição fixa */
+      left: -50px; /* Remove a posição fixa */
+      padding: 10px; /* Adiciona padding ao conteúdo */
+      display: block; /* Ajusta o layout para empilhar verticalmente */
+      top: -250px;
+        width: 319px;
+    
+    }
+  
+    .highlight-button {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+        padding: 8px 0;
+        position: relative;
+        top: -40px;
+    }
+    .highlight-button span {
+        display: none; }
+  
+    .banner-title {
+        font-size: 16px;
+        width: 172px;
+        height: 19px;
+        position: relative;
+        top: 55px;
+    }
+  
+    .banner-content p {
+        width: 319px;
+        font-size: 12px;
+        position: relative;
+        top: 41px;
+    }
+    .rating {
+        background-color: rgba(255, 255, 255, 0.2);
+        width: 60px;
+        
+        border-radius: 8px;
+        padding: 4px;
+        position: relative;
+        top: -89px;
+        left: 35px;
+    }
+    .rating .text, 
+    .rating .additional-elements {
+        display: none; /* Esconde elementos adicionais */
+    
+      
+    }
+  
+    .watch-button {
+      width: 173px; /* Ajusta a largura do botão para 100% */
+      height: 27px; /* Ajusta a altura do botão */
+      font-size: 12px; /* Ajusta o tamanho da fonte */
+      position: relative;
+      top: 45px;
+    }
+    .watch-button h3 {
+        width: 148px;
+        position: relative;
+        top: -16px;
+        font-size: 12px;
+    
+    
+    }
+  
+    .banner-small {
+        display: flex; /* Mantém as imagens lado a lado */
+        flex-wrap: wrap; /* Permite quebrar para a próxima linha, se necessário */
+        justify-content: center; /* Centraliza as imagens horizontalmente */
+        position: relative;
+        top: -230px;        
+        margin: 10px;
+        
+    }
+    
+    .small-banner-title {
+        font-size: 1.2rem; /* Reduz o tamanho da fonte do título */
+        margin-bottom: 10px; /* Mantém a margem inferior */
+        text-align: center; /* Centraliza o texto */
+    }
+    .small-banner-images {
+        display: flex; /* Mantém o layout flexível */
+        flex-direction: row; /* Imagens lado a lado */
+        justify-content: center; /* Centraliza as imagens horizontalmente */
+        gap: 8px; /* Espaço entre as imagens */
+        width: 100%; /* Ajusta a largura total para 100% */
+    }
+    .small-banner-item img{
+        width: 166px;
+        height: 284px;
+    }
+
+    .small-banner-item {
+        width: 50%; /* Ajusta a largura para duas imagens lado a lado */
+        display: block; /* Garante que os itens sejam exibidos */
+    }
+
+    /* Esconde todas as imagens além da segunda */
+    .small-banner-item:nth-of-type(n+3) {
+        display: none; /* Esconde imagens a partir da terceira */
+    }
+    
+    .small-banner-content {
+        margin-top: 10px; /* Adiciona uma margem superior */
+        margin: 10px;
+       
+    }
+    
+    .small-banner-movie-title {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        position: relative;
+        left: 184px;
+        font-size: 16px;
+        width: 166px;
+        top: -203px;
+    }
+  
+    .small-watch-button {
+        width: 158px;
+        height: 40px;
+        font-size: 14px;
+        margin-top: 10px;
+        position: relative;
+        left: 170px;
+        top: -204px;
+    }
+  
+    .small-watch-button h1 {
+        font-size: 13px;
+        color: #fcfbfb;
+        width: 163px;
+        padding: 3px;
+    }
+  
+    .small-banner-rating {
+        width: 45px;
+        height: auto;
+        position: relative;
+        left: 170px;
+        top: -350px;
+    }
+}

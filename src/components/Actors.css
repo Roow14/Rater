@@ -1,0 +1,119 @@
+/* Estilo principal para a tela de atores */
+.actors-container {
+    width: 1471px;    
+    height: 342.67px; /* Altura fixa */
+    padding: 24px;
+   /* Centraliza o container */
+    position: relative;
+    top: 40px;
+    background: black;
+  }
+  
+  .actors-container h2 {
+    font-size: 24px; /* Tamanho da fonte do título */
+    margin-bottom: 12px;
+    color: aliceblue;
+   
+  }
+  
+  .actors-list {
+    display: flex;
+    overflow-x: hidden; /* Permite rolagem horizontal */
+    gap: 12px;
+    padding-bottom: 12px; /* Espaço para o scrollbar */
+    scroll-behavior: smooth; /* Rolagem suave */
+    -webkit-overflow-scrolling: touch; /* Melhora a rolagem em iOS */
+  }
+  
+  .actor-card {
+    flex: 0 0 auto; /* Impede o item de encolher ou crescer */    
+    height: 253.67px; /* Altura fixa */
+    border-radius: 24px; /* Bordas arredondadas */
+    position: relative;
+    overflow: hidden; /* Garante que as imagens não ultrapassem o container */
+    margin: 2px;
+  }
+  .actor-card:hover {
+    transform: scale(1.08);
+    
+  }
+  .actor-image {
+    width: 268px; /* Ocupa toda a largura do card */
+    height: 283px; /* Ocupa toda a altura do card */
+    object-fit: cover; /* Cobre o card sem distorcer */
+  }
+  
+  .actor-name {
+    position: absolute;
+    bottom: 10px; /* Ajusta a posição do texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Adiciona um contorno ao texto */
+    
+    text-align: left; /* Centraliza o texto */
+    color: white;
+    font-size: 20px; /* Tamanho da fonte do nome */    
+    padding: 4px;
+    border-radius: 12px;
+  }
+  
+  .nav-buttons {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .nav-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%; /* Botões redondos */
+  }
+  
+  .nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .actors-container {
+    width: 343px;
+      height: 200px; /* Ajusta a altura para telas menores */
+      position: relative;
+      top: -1000px;
+      left: -15px;
+    }
+  
+    .actors-list {
+      gap: 8px; /* Reduz o espaço entre os cards */
+      position: relative;
+        left: -16px;
+    }
+    .actor-image {
+      width: 168px;
+        
+      }
+    .actor-card {
+      width: 166px; /* Ajusta a largura para telas menores */
+      height: 250px; /* Ajusta a altura para telas menores */
+      border-radius: 24px;
+      
+    }
+  
+    .actor-name {
+      font-size: 14px; /* Reduz o tamanho da fonte do nome */
+      padding: 2px; /* Reduz o padding */
+    }
+  
+    .nav-buttons {
+      top: 48px; /* Ajusta a posição das setas */
+      right: 5px;
+    }
+  
+    .nav-button {
+      padding: 8px; /* Ajusta o tamanho dos botões das setas */
+    }
+  }
+  

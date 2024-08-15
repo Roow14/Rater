@@ -1,0 +1,215 @@
+/* MovieDetailPage.css */
+body, html {
+  margin: 0;
+  padding: 0;
+  
+}
+
+.movie-detail-container {
+  display: flex;
+  flex-direction: column;
+  width: 1400px;
+  padding: 20px;
+  background: #000;
+  
+}
+
+.banner {
+  width: 1440px;
+  height: 536px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  top: 150px;
+  border-radius: 24px;
+  padding:24px;
+}
+
+.trailer-button {
+  width: 216px;
+  height: 48px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);   
+  backdrop-filter: blur(8px); 
+  border: none;
+  border-radius: 5px;
+}
+
+.movie-description {
+  margin-top: 20px;
+  position: relative;
+  top: 40px;
+  color: #fff;
+  
+}
+.movie-description h1{
+  font-size: 40px;
+}
+.movie-description .rating{
+  font-size: 20px;
+  position: relative;
+  left: 33%;
+  top: -30px;
+  color: #fff;
+}
+.movie-description .subtitle{
+  font-size: 20px;
+  position: relative;
+  left: 38%;
+  top: -80px;
+  color: #666;
+}
+.star-icon {
+  position: relative;
+  top: 0px;
+  color: yellow;
+}
+.movie-description p{
+  font-size: 10px;
+  color: rgb(250, 251, 251);
+  width:868px ;
+  height: 64px;
+  font-size: 20px;
+  position: relative;
+  top: -100px;
+}
+
+.movie-credits {
+  color:white;
+  width: 300px;
+  height: 10px;
+  position: relative;
+  left: 65%;
+  top: -200px;
+
+}
+.movie-credits h2{
+  font-size: 16px;
+}
+.movie-credits p{
+  font-size: 14px;
+  width: 400px;
+}
+.movie-writers {
+  margin-top: 20px;
+}
+
+.movie-writers h2 {
+  margin-top: 10px;
+}
+
+.movie-artists {
+  margin: 20px 0;
+  width: 1390px;
+  height: 348px;
+}
+.movie-artists h2{
+  color: white;
+}
+.carousel .cast-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px; /* Espaçamento ao redor do item */
+  max-width: 268.8px; /* Largura máxima de cada item */
+}
+
+.cast-photo {
+  width: 268.8px; /* Largura da imagem */
+  height: 253.67px; /* Altura da imagem */
+  object-fit: cover;
+  border-radius: 24px; /* Bordas arredondadas */
+  margin-bottom: 8px; /* Margem inferior */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cast-item p {
+  margin: 4px 0; /* Margem entre as linhas de texto */
+  font-size: 14px; /* Tamanho da fonte */
+  color: white;
+  text-align: start;
+  position: relative;
+  top: -60px;
+  left: 10px;
+  width: 224px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Adiciona um contorno ao texto */
+}
+
+.carousel .slick-dots {
+  bottom: -30px;
+}
+
+.carousel .slick-dots li button:before {
+  color: #666;
+}
+
+.carousel .slick-dots li.slick-active button:before {
+  color: #000;
+}
+
+.similar-movies {
+  margin: 20px 0;
+  width: 1450px;
+  height: 348px;
+}
+
+.similar-movies-list {
+  display: flex;
+  overflow-x: auto;
+  gap: 12px;
+  height: 348px;
+  overflow-y: hidden;
+  overflow-x: hidden; /* Esconder a barra de rolagem horizontal */
+}
+
+.similar-movie-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px; /* Espaçamento ao redor do item */
+  max-width: 268.8px; /* Largura máxima de cada item */
+  
+  
+}
+
+.similar-movie-poster {
+  width: 268.8px; /* Largura da imagem */
+  height: 253.67px; /* Altura da imagem */
+  object-fit: cover;
+  border-radius: 24px; /* Bordas arredondadas */
+  margin-bottom: 8px; /* Margem inferior */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+}
+.similar-movies h2 {
+color: #fff;
+
+}
+.similar-movie-item p{
+  text-align: start;
+  color: white;
+  position: relative;
+  top: -100px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Adiciona um contorno ao texto */
+}
+.similar-movies .trailer-button {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  padding: 8px ;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;  
+  position: relative;
+  top: -110px;
+  left: -20px;
+  width: 184px;
+}
+
+
